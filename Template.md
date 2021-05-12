@@ -1,10 +1,8 @@
-### **Title:** <*ADR TITLE HERE*>
+# <*ADR TITLE HERE*>
 
 ### **Date:** <*ADR DATE HERE*>
 
-### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED 
-
-**delete as appropriate*
+### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED  [**delete as appropriate*]
 
 ## **Context**
 

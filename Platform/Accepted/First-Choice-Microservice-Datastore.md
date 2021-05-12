@@ -15,6 +15,7 @@ Although each microservice should decide the most appropriate datastore, general
 ## **Decision**
 
 **AWS DynamoDB**
+
 DynamoDB is the fully managed NoSQL db in AWS. A NoSQL database is the “first choice” of datastore for the following reasons:
 - A microservice is quite small so that the majority of the times we do not need complicated relations models.
 - NoSQL has been designed for horizontal scalability.

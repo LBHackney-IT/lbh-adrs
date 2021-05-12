@@ -16,7 +16,8 @@ Although in a microservices architecture each service can be developed with its 
 
 ## **Decision**
 
-.NET Core 3.1/C# 
+**.NET Core 3.1/C#**
+
 .NET Core/C# is the most common framework/language used for the majority of Hackney APIs, it’s the programming language that Hackney developers are more familiar with, plus it has got the following well known advantages:
 
 - It’s open source
