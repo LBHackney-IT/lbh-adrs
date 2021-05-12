@@ -72,33 +72,7 @@ Decision sharing (optional):
 
 ## **Template for Lightweight ADRs**
 
-In each ADR file, write these sections:
-
-### **Title**
-
-A short sentence to recap the decision taken.
-
-### **Date**
-
-### **Status**
-
-What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
-
-### **Context**
-
-What is the issue that we're seeing that is motivating this decision or change?
-
-### **Decision**
-
-What is the change that we're proposing and/or doing?
-
-### **Further details**
-
-Links to evaluations, previously done work, spike documentation, etc. 
-
-### **Consequences**
-
-What becomes easier or more difficult to do because of this change?
+[See the Template here](https://github.com/LBHackney-IT/lbh-adrs/blob/feature/create-ADRs/Template.md)
 
 ## Revisit a past decision
 
