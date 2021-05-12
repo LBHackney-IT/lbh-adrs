@@ -2,9 +2,7 @@
 
 ### **Date:** <*ADR DATE HERE*>
 
-## **Status**
-
-DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERCEDED 
+### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED 
 
 **delete as appropriate*
 

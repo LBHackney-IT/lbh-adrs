@@ -2,9 +2,7 @@
 
 ### **Date:** 30th March 2021
 
-## **Status**
-
-What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+### **Status:** ACCEPTED
 
 ## **Context**
 

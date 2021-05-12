@@ -1,12 +1,10 @@
-### **Title:** Backend Tech Stack
+#  Backend Tech Stack
 
 ### **Date:** 30th March 2021
 
-## **Status**
+### **Status:** ACCEPTED
 
-ACCEPTED
-
-### **Context:**
+## **Context**
 
 Hackney has several backend applications using different programming languages and frameworks:
 
@@ -16,7 +14,7 @@ Hackney has several backend applications using different programming languages a
 
 Although in a microservices architecture each service can be developed with its own programming language and framework, unless a service requires a particular programming language, it’s still good to agree on a common language/framework for mtfh-T&L workstream. This will make it easier to shift developers from different teams/services. 
 
-### **Decision:**
+## **Decision**
 
 .NET Core 3.1/C# 
 .NET Core/C# is the most common framework/language used for the majority of Hackney APIs, it’s the programming language that Hackney developers are more familiar with, plus it has got the following well known advantages:
@@ -28,6 +26,6 @@ Although in a microservices architecture each service can be developed with its 
 
 We are not using .NET 5.0 as .NET 3.1 is the latest LTS version of .NET core supported by AWS Lambda. 
 
-### **Consequences:**
+## **Consequences**
 
 It’s not possible to reuse code/modules from application written in a different framework than .NET C#.
