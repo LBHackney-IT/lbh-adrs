@@ -1,8 +1,6 @@
-## **Title**
+### **Title:** <*ADR TITLE HERE*>
 
-A short sentence to recap the decision taken.
-
-## **Date**
+### **Date:** <*ADR DATE HERE*>
 
 ## **Status**
 
@@ -16,10 +14,10 @@ What is the issue that we're seeing that is motivating this decision or change?
 
 What is the change that we're proposing and/or doing?
 
-## Further details
+## **Further details**
 
 Links to evaluations, previously done work, spike documentation, etc. 
 
-## Consequences
+## **Consequences**
 
 What becomes easier or more difficult to do because of this change?
