@@ -74,48 +74,48 @@ Decision sharing (optional):
 
 In each ADR file, write these sections:
 
-## Title
+### **Title**
 
 A short sentence to recap the decision taken.
 
-## Date
+### **Date**
 
-## Status
+### **Status**
 
 What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
 
-## Context
+### **Context**
 
 What is the issue that we're seeing that is motivating this decision or change?
 
-## Decision
+### **Decision**
 
 What is the change that we're proposing and/or doing?
 
-## Further details
+### **Further details**
 
 Links to evaluations, previously done work, spike documentation, etc. 
 
-## Consequences
+### **Consequences**
 
 What becomes easier or more difficult to do because of this change?
-
 
 ## Revisit a past decision
 
 If we revisit a past decision it needs to be a new ADR. This new ADR will supersede the previous decision.We will need to mark the relationship between the two ADRs:
-in the old ADR, indicates it’s superseded by the new one (add a link).
-in the new ADR, reference the old ADR that is superseded (add a link too)
+- in the old ADR, indicates it’s superseded by the new one (add a link).
+- in the new ADR, reference the old ADR that is superseded (add a link too)
 
+## Appendix
 
+| Acronym | Term                                    |
+| ------- | --------------------------------------- |
+| AD      | Architecture decision                   |
+| ADL     | Architecture decision log               |
+| ADR     | Architecture decision record            |
+| AKM     | Architecture knowledge management       |
+| ASR     | Architecturally-significant requirement |
 
-Appendix
-
-| AD  | Architecture decision                   |
-| ADL | Architecture decision log               |
-| ADR | Architecture decision record            |
-| AKM | Architecture knowledge management       |
-| ASR | Architecturally-significant requirement |
 
 Resource referred :
 
