@@ -49,4 +49,4 @@ Fluent Valdation is widely used, offers a lot of flexibility and allows for a cl
 
 ## **Consequences**
 
-By using Fluent Validation, API requests can be validated in one place, instead of having validation defined on attributes in classes that are spread around the code base. It also means that testing of validation can be vastly simplified.
+By using Fluent Validation, API requests can be validated in one place, instead of having validation defined on attributes in classes that are spread around the code base. It also means that testing of validation can be vastly simplified, and validation messaging can be externalised from the codebase.
