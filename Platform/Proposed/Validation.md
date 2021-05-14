@@ -1,6 +1,6 @@
 # Standard for API request validation
 
-### **Date:** <*ADR DATE HERE*>
+### **Date:** 14th May 2021
 
 ### **Status:** PROPOSED
 
