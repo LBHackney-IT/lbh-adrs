@@ -38,9 +38,11 @@ Alongside the decision to adopt an event driven architecture, there is a need to
 
 ## **Decision**
 
-**Thin Events**
+**Thin Events** 
 
 The easiest solution is to use thin events, with consumers gathering the data they need using API calls. This has the benefit of reducing the need for event versioning, and event payloads that grow in size over time.
+
+
 
 ## **Consequences**
 

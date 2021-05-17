@@ -1,4 +1,4 @@
-# <*ADR TITLE HERE*>
+# Feature Toggling
 
 ### **Date:** <*ADR DATE HERE*>
 
@@ -6,9 +6,15 @@
 
 ## **Context**
 
-What is the issue that we're seeing that is motivating this decision or change?
+In order to be able to release code safely as part of a CI/CD pipeline, it is necessary to have a feature management capability to externalise the ability to enable features.
+
+The options available are:
+
+- AWS AppConfig
 
 ## **Decision**
+
+**AWS AppConfig**
 
 What is the change that we're proposing and/or doing?
 
