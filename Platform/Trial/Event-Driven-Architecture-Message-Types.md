@@ -2,7 +2,7 @@
 
 ### **Date:** 14th May 2021
 
-### **Status:** PROPOSED
+### **Status:** TRIAL
 
 ## **Context**
 
