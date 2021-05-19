@@ -2,7 +2,7 @@
 
 ### **Date:** <*ADR DATE HERE*>
 
-### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED  [**delete as appropriate*]
+### **Status:** DRAFT | PROPOSED | TRIAL | ACCEPTED | REFUSED | SUPERSEDED  [**delete as appropriate*]
 
 ## **Context**
 

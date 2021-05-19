@@ -1,8 +1,8 @@
 # Microfrontends Compositions
 
-### **Date:** <*ADR DATE HERE*>
+### **Date:** 30/03/2021
 
-### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED  [**delete as appropriate*]
+### **Status:** ACCEPTED
 
 ## **Context**
 
