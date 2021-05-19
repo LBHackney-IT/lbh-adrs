@@ -8,6 +8,8 @@
 
 In order to be able to release code safely as part of a CI/CD pipeline, it is necessary to have a feature management capability to externalise the ability to enable features.
 
+This can be achieved by including feature toggles in code, and by versioning APIs to account for breaking changes.
+
 The options available are:
 
 - AWS AppConfig
