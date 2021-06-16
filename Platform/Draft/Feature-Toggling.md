@@ -2,7 +2,7 @@
 
 ### **Date:** <*ADR DATE HERE*>
 
-### **Status:** DRAFT | PROPOSED | ACCEPTED | REFUSED | SUPERSEDED  [**delete as appropriate*]
+### **Status:** DRAFT
 
 ## **Context**
 
@@ -12,6 +12,7 @@ This can be achieved by including feature toggles in code, and by versioning API
 
 The options available are:
 
+- Environment Variables
 - AWS AppConfig
 
 ## **Decision**
