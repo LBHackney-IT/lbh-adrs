@@ -35,6 +35,4 @@ This option has been chosen for a number of reasons:
 
 ## **Consequences**
 
-
-
 There will be a need to import the data that is not categorized as a Master Tenure Record separately, but this will ensure that the tenure data that is imported is correct. For the non-imported data, this will be modelled at a Data meetup prior to import.
