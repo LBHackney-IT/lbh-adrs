@@ -33,7 +33,7 @@ Property search flow:
 ### Disadvantages:
 - Tightly coupled services (if Assets is down, RepairsHub is down)
 - Driving further down the “API hops” route
-- Lose out on EDA advantages
+- Lose out on EDA advantages for this integration specifically
 
 ### Variation Option 1a
 
@@ -42,6 +42,7 @@ Integrate NextJS frontend with the Property Search API and Assets API
 ### Advantages:
 - Less hops
 - Higher maint cost for dependant APIs
+- Does not increase API hops
 
 ### Disadvantages:
 - Far higher complexity in JS
