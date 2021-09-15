@@ -32,7 +32,6 @@ Property search flow:
 
 ### Disadvantages:
 - Tightly coupled services (if Assets is down, RepairsHub is down)
-- Will reduce performance and increase network traffic
 - Driving further down the “API hops” route
 - Lose out on EDA advantages
 
@@ -72,7 +71,7 @@ User requests call this local store
 
 ## **Decision**
 
-Option 1 is the chosen approach
+Option 1a is the chosen approach - Housing Search API and Assets API will be called directly from the Frontend
 
 
 
