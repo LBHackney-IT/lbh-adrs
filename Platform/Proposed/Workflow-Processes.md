@@ -10,23 +10,34 @@ There is a need at Hackney to be able to define workflow processes that will enf
 
 The options for managing and maintaining workflow processes vary in complexity, from:
 
-- using an off the shelf software package that allows setup and management of workflow processes
-  - useful to build complex, customisable workflows
+### Off-the-shelf workflow solution
+
+  - Provides the option to build complex, fully customisable workflows
   - there will be a need to provide training on the use of this software
   - there will be a need for someone with technical expertise to support and maintain it
   - there will most likely be one-off or ongoing fees around licencing and support
   - more difficulty integrating this into MMH
-- building a in-house solution
-  - use existing Playbook API
-  - use existing in-house technical expertise
-  - use lightweight "state-machine" functionality
-  - non-technical can do less without support from a developer
-  - build out functionality as it is needed
-  - built within MMH so will be compatible with the existing architecture
 
-## **Decision**
+### Build it ourselves
 
-**Stateless**
+  - can use the existing Playbook API as a foundation, along with all the knowledge and documentation around that
+  - will integrate nicely with MMH and other workstreams
+  - can use existing in-house developer talent to build and maintain this
+
+**Fully bespoke state machine**
+
+  - will require perhaps complex engineering challenge to build and support this
+
+****Use stateless****
+
+  - already tackled the engineering effort to develop a state machine
+  - very extensible, as it is just the framework for a state machine
+  - integrates nicely with external data stores
+  - documentation exists online
+
+### Decision
+
+**Build it ourselves - Use Stateless**
 
 Implement an API that uses the Stateless nuget package in order to manage process state, therefore saving the need to build a bespoke state machine.
 
