@@ -24,11 +24,11 @@ The options for managing and maintaining workflow processes vary in complexity, 
   - will integrate nicely with MMH and other workstreams
   - can use existing in-house developer talent to build and maintain this
 
-**Fully bespoke state machine**
+**Build our own state machine**
 
   - will require perhaps complex engineering challenge to build and support this
 
-****Use stateless****
+**Use Stateless**
 
   - already tackled the engineering effort to develop a state machine
   - very extensible, as it is just the framework for a state machine
