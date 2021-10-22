@@ -32,9 +32,9 @@ Implement an API that uses the Stateless nuget package in order to manage proces
 
 ## **Further details**
 
-[Stateless - Project Overview](https://nblumhardt.com/2016/11/stateless-30/)
-[Stateless - Github Repository](https://github.com/dotnet-state-machine/stateless)
-[Stateless - Community Support from Scott Hanselman](https://www.hanselman.com/blog/stateless-30-a-state-machine-library-for-net-core)
+- [Stateless - Project Overview](https://nblumhardt.com/2016/11/stateless-30/)
+- [Stateless - Github Repository](https://github.com/dotnet-state-machine/stateless)
+- [Stateless - Community Support from Scott Hanselman](https://www.hanselman.com/blog/stateless-30-a-state-machine-library-for-net-core)
 
 ## **Consequences**
 
