@@ -35,6 +35,7 @@ Implement an API that uses the Stateless nuget package in order to manage proces
 [Stateless - Project Overview](https://nblumhardt.com/2016/11/stateless-30/)
 [Stateless - Github Repository](https://github.com/dotnet-state-machine/stateless)
 [Stateless - Community Support from Scott Hanselman](https://www.hanselman.com/blog/stateless-30-a-state-machine-library-for-net-core)
+
 ## **Consequences**
 
 By favouring building our own process API and underlying process engine, we can start with a simple implementation and introduce complexity using the in-house knowledge and experience of Hackney developers. By building it on top of the existing Playbook API, we can adhere to the pre-existing architectural principles in place, and for which there is already extensive documentation.
