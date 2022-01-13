@@ -17,9 +17,11 @@ Currently this process does not factor in the Interim Finance solution so this s
 ## **Decision**
 
 **Pushing data to spreadsheet on MMH Create or Update events**
+
 As there is already a solution in place that listens for updates to tenure records coming from MMH, this can be extended to also populate the specified spreadsheet.  The data in the spreadsheet can subsequently be used to update the Interim Finance solution.  The spreadsheet will be a temporary measure to allow relevant users the opportunity to validate the data going into the finance solution.  The spreadsheet should also be read only to maintain the integrity of the data.  Any changes needed would be done at the source (eg tenure information in MMH and PRNs in Finance) so there will be a unidirectional flow of data.
 
 **Phasing out the spreadsheet**
+
 Once users are confident that the data flowing to the interim solution is correct.  Steps would be taken to push data directly to the interim solution and remove the intermediate step of saving to the spreadsheet.
 
 ## **Consequences**
