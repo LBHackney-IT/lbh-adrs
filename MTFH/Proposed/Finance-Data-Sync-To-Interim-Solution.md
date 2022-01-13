@@ -12,6 +12,8 @@ There is currently a gap in the flow of data in finance systems of Modern Tools 
 - A listener in the Finance service is used to check for these events and update the accounts entity with matching records.
 
 ## **The Problem**
+New tenure records are created via MMH. For each new tenure, an account record with a payment reference gets created. The 'Accounts API' and listener are used to achieve this - both of those components are part of the Final Finance System.
+
 Currently this process does not factor in the Interim Finance solution so this service does not automatically receive new or updated records.  At the moment a spreadsheet is being used to store this information and manually get it into the interim solution.  It means that these records may not be available on the interim solution on a timely basis.
 
 ## **Decision**
