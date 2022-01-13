@@ -8,34 +8,19 @@
 
 There is currently a gap in the flow of data in finance systems of Modern Tools for housing with regards to created and/or updated accounts.  The current workflow is as follows:
 - Tenure records are created or updated in the Manage My Home (MMH) work stream.
-- Events are triggered when these records are created or updated.
-- A listener 
+- Events are triggered from the Tenure API when these records are created or updated.
+- A listener in the Finance service is used to check for these events and update the accounts entity with matching records.
 
-- Master Tenure Record
-  - These records represent true tenures - i.e. the association between a person and a property
-- Everything else
-  - These records are store in tenagree as this was a convenient location, however they are not a tenure as they do not have an association with a property - they are an "account" associated with a Master Tenure Record
-
-For the purpose of viewing a tenure in Manage My Home, the only category that is relevant is a Master Tenure Record.
-
-When importing the data as part of the the development of Manage My Home, we have considered two options:
-
-1. Import the data as it is currently stored in UH, and mark anything that isn't a Master Tenure Record as a "child" of a Master Tenure Record
-2. Import only Master Tenure Records
-    - everything else stored in `tenagree` should be imported according to a separate data model
+## **The Problem**
+Currently this process does not factor in the Interim Finance solution so this service does not automatically receive new or updated records.  At the moment a spreadsheet is being used to store this information and manually get it into the interim solution.  It means that these records may not be available on the interim solution on a timely basis.
 
 ## **Decision**
 
-**Import only Master Tenure Records**
+**Pushing data to spreadsheet on MMH Create or Update events**
+As there is already a solution in place that listens for updates to tenure records coming from MMH, this can be extended to also populate the specified spreadsheet.  The data in the spreadsheet can subsequently be used to update the Interim Finance solution.  The spreadsheet will be a temporary measure to allow relevant users the opportunity to validate the data going into the finance solution.  The spreadsheet should also be read only to maintain the integrity of the data.  Any changes needed would be done at the source (eg tenure information in MMH and PRNs in Finance) so there will be a unidirectional flow of data.
 
-This option has been chosen for a number of reasons:
-
-1. we are importing legacy data and have the ability to correct any inconsistency at this point
-2. If we import the data as-is, we will be persisting the incorrectly modelled data
-3. if we import the data as-is, we will need to either:
-   - display it when viewing the list of tenures associated with a person/property
-   - hide it when viewing the list of tenures associated with a person/property, therefore increasing complexity of the delivered solution
+**Phasing out the spreadsheet**
+Once users are confident that the data flowing to the interim solution is correct.  Steps would be taken to push data directly to the interim solution and remove the intermediate step of saving to the spreadsheet.
 
 ## **Consequences**
-
-There will be a need to import the data that is not categorized as a Master Tenure Record separately, but this will ensure that the tenure data that is imported is correct. For the non-imported data, this will be modelled at a Data meetup prior to import.
+Having this in place will eliminate the manual data input to spreadsheet and have a consistent and real time process for updating/synchronising all areas where this data is required and eliminate the need for human intervention.
