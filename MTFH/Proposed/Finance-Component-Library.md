@@ -7,6 +7,9 @@
 ## **Context**
 
 The Finance component library is a set of reusable components in the finance domain with the intent to reuse these when building out the new Manage Arrears application.
+
+The component library can be located [here](https://61f0267fc8e670003a291a88-urjhjsfyvz.chromatic.com/?path=/story/blocks-headerblock--normal)
+
 Two questions hav arisen regarding continued development of this component library.
 
 - Whether or not we want to model Manage Arrears after the Final Finance Solution or with the wider design being utilised in the micro frontend space.
