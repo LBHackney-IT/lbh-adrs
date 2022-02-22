@@ -13,7 +13,7 @@ for the data migration purposes since there are a lot of records per entity, we 
 
 for now for 50 write capacity the speed is 25 records per seconds
 
-the main problem is in the development, production and staging environment which we have over than 100,000,000 records for transactions which will take a lot of time to migrate the all data,
+the main problem is in the development, production and staging environments which we have over than 100,000,000 records for transactions which will take a lot of time to migrate the all data,
 
 by write capacity unit = 1000 the speed would be 250 recs per seconds in data migration and it would be 4.6 days' in average to migrate all transactions into the Production or staging environment
 
