@@ -29,18 +29,18 @@ Due to this restriction the main decision is increasing the write and read capac
 
 **Proposed write capacity units for Dev, Staging and Prod environments**
 
-1. 100 for Charges Entity
-2. 100 for Accounts Entity
+1. 600 for Charges Entity
+2. 200 for Accounts Entity
 3. 1000 for Transactions Entity for development
 
 **Entities that needed to have change in read capacity**
 
 1. Charges Entity
 
-**Proposed reade capacity units for Dev, Staging and Prod environments**
+**Proposed read capacity units for Dev, Staging and Prod environments**
 For head of charges apportionment purposes we need to read all charges data then the read capacity unit should be increased here as well.
 
-1. 100 for Charges Entity
+1. 600 for Charges Entity
 
 ## **Further details**
 
