@@ -47,14 +47,14 @@ For head of charges apportionment purposes we need to read all charges data then
 
 | Entity Name | Environment | Number of records | Max Row Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity 
 | Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change |
-|------|------|---------|---------|------|------|---------|---------|---------|
+|--------------|--------------|----------------|---------------|------------|------------|---------------|--------------|--------------|
 | Charges | Dev | 60,000 | 201 B | 500 | 500 | 500/Sec | 2m | ? |
 
 
-| A | B | C | D |
-|------|------|------------------|-------------|
-| a | b | c | d |
-| 1 | 2 | 3 | 4 |
+| A | B | C | D | E | F | G | H | I |
+|------|------|------|------|------|------|------|------------------|-------------|
+| Charges | Dev | 60,000 | 201 B | 500 | 500 | 500/Sec | 2m | ? |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 
 ## **Consequences**
 Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the apportionment requirement can happen 1 or 2 times in years.
