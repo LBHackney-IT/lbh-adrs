@@ -29,10 +29,9 @@ Due to this restriction the main decision is increasing the write and read capac
 
 **Proposed write capacity units for Dev, Staging and Prod environments**
 
-1. 500 for Charges Entity
-2. 500 for Accounts Entity
+1. 100 for Charges Entity
+2. 100 for Accounts Entity
 3. 1000 for Transactions Entity for development
-4. 2000 for Transactions Entity for Staging and Production
 
 **Entities that needed to have change in read capacity**
 
@@ -41,15 +40,16 @@ Due to this restriction the main decision is increasing the write and read capac
 **Proposed reade capacity units for Dev, Staging and Prod environments**
 For head of charges apportionment purposes we need to read all charges data then the read capacity unit should be increased here as well.
 
-1. 500 for Charges Entity
+1. 100 for Charges Entity
 
 ## **Further details**
 
 | Entity Name | Environment | Number of records | Max Row Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity | Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change |
 |------|------|------|------|------|------|------|------------------|-------------|
-| Charges | Dev | 60,000 | 201 B | 500 | 10 | 500/Sec | 2m | ? |
-| Account | Dev | 100,000 | 401 B | 500 | 10 | 500/Sec | 2m | ? |
+| Charges | Dev | 60,000 | 201 B | 100 | 100 | 100/Sec | 10m | ? |
+| Account | Dev | 100,000 | 401 B | 100 | 10 | 100/Sec | 10m | ? |
 | Transactions | Dev | 3,000,000 | 245 B | 1000 | 10 | 1000/Sec | 50m | ? |
 
 ## **Consequences**
-Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the apportionment requirement can happen 1 or 2 times in years.
+Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the charges estimate and actual apportionment requirement, it can happen 1 or 2 times in years.
+but with regards to the future usage and the use percentage during the 24 hours a day, it can be auto scaling mode to handle the costs.
