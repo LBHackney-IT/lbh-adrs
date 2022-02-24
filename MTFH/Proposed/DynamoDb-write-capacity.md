@@ -45,28 +45,10 @@ For head of charges apportionment purposes we need to read all charges data then
 
 ## **Further details**
 
-| Entity Name | Environment | Number of records | Proposed New Write Capacity | Proposed New Read Capacity | Number or records/second after the change | Estimated Time to move all the records from IFS -> Staging/Prod | The required AWS package size for each proposed change
-|------|------|---------|---------|---------|---------|---------|---------|
-| Id | GUID | id | A unique id in the database |
-| TargetId | String | target_id | A reference to the person holding this account|
-| TargetType | String | target_type | Referenced from the collection of target types sub table |
-| AccountType | String | account_type | The type of account, eg Recharge, Sundry, Master |
-| RentGroupType | String | rent_group_type | Eg MajorWorks |
-| AgreementType | String | agreement_type | |
-| AccountBalance | Number | account_balance | The current balance of the account (calculated based on activity on the account such as charges, payments, etc) |
-| ConsolidatedBalance | Number | consolidated_balance | The summarized balance amount of the all related account to the master one |
-| ParentAccountId | String/Varchar | parent_account_id | The main and master account which includes child accounts too. |
-| PaymentReference | String/Varchar | payment_reference | A user friendly reference for an account (calculated - Ibrahim has the formula) |
-| CreatedAt | TimeStamp | created_date | The date the account was created |
-| CreatedBy | String | created_by | The user who created the record |
-| LastUpdatedBy | String | last_updated_by | The last user who updated the record |
-| LastUpdatedAt | TimeStamp | last_updated | When last the account record was updated |
-| StartDate | TimeStamp | start_date | Date the account was opened |
-| EndDate | TimeStamp | end_date | Date the account was closed |
-| EndReasonCode | String | end_reason_code | The reason for the account ending |
-| ConsolidatedCharges | Object | consolidated_charges | See breakdown of consolidated charges |
-| Tenure | Object | tenure | Includes the information about the tenancy and responsible person |
-| AccountStatus | String | account_status | Active, suspended or ended |
+| Entity Name | Environment | Number of records | Max Row Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity 
+| Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change
+|------|------|---------|---------|------|------|---------|---------|
+| Charges | Dev | 60,000 | 201 B | 500 | 500 | 500/Sec | 2m | 
 
 ## **Consequences**
 Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the apportionment requirement can happen 1 or 2 times in years.
