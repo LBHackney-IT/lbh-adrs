@@ -17,6 +17,10 @@ the main problem is in the development, production and staging environments whic
 
 by write capacity unit = 1000 the speed would be 250 recs per seconds in data migration and it would be 4.6 days' in average to migrate all transactions into the Production or staging environment
 
+## **Decision**
+
+Due to this restriction the main decision is increasing the write and read capacities for the mentioned entities below because of speed requirement in data migration and charges apportionment for estimate and actuals.
+
 **Entities that needed to have change in write capacity**
 
 1. Charges Entity
@@ -27,7 +31,8 @@ by write capacity unit = 1000 the speed would be 250 recs per seconds in data mi
 
 1. 500 for Charges Entity
 2. 500 for Accounts Entity
-3. 2000 for Transactions Entity
+3. 1000 for Transactions Entity for development
+4. 2000 for Transactions Entity for Staging and Production
 
 **Entities that needed to have change in read capacity**
 
@@ -37,3 +42,20 @@ by write capacity unit = 1000 the speed would be 250 recs per seconds in data mi
 For head of charges apportionment purposes we need to read all charges data then the read capacity unit should be increased here as well.
 
 1. 500 for Charges Entity
+
+## **Further details**
+
+The counts of records for the corresponding entities described more in detail below
+
+In development
+1. Charges Entity = 60,000
+2. Accounts Entity = 100,000
+3. Transactions Entity = 3,000,000
+
+In staging and production
+1. Charges Entity = ?
+2. Accounts Entity = ?
+3. Transactions Entity = 100,000,000
+
+## **Consequences**
+Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the apportionment requirement can happen 1 or 2 times in years.
