@@ -52,10 +52,5 @@ In development
 2. Accounts Entity = 100,000
 3. Transactions Entity = 3,000,000
 
-In staging and production
-1. Charges Entity = ?
-2. Accounts Entity = ?
-3. Transactions Entity = 100,000,000
-
 ## **Consequences**
 Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the apportionment requirement can happen 1 or 2 times in years.
