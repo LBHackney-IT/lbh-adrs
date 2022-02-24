@@ -46,7 +46,7 @@ For head of charges apportionment purposes we need to read all charges data then
 ## **Further details**
 
 | Entity Name | Environment | Number of records | Max Row Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity 
-| Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change
+| Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change |
 |------|------|---------|---------|------|------|---------|---------|---------|
 | Charges | Dev | 60,000 | 201 B | 500 | 500 | 500/Sec | 2m | ? |
 
