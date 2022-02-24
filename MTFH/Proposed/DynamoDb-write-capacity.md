@@ -44,11 +44,11 @@ For head of charges apportionment purposes we need to read all charges data then
 
 ## **Further details**
 
-| Entity Name | Environment | Number of records | Max Row Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity | Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change |
+| Entity Name | Environment | Number of records | Average item Size(Byte) | Proposed New Write Capacity | Proposed New Read Capacity | Number or records/second after the change | Estimated Time to move all the records from IFS -> FFS | The required AWS package size for each proposed change |
 |------|------|------|------|------|------|------|------------------|-------------|
-| Charges | Dev | 60,000 | 201 B | 100 | 100 | 100/Sec | 10m | ? |
-| Account | Dev | 100,000 | 401 B | 100 | 10 | 100/Sec | 10m | ? |
-| Transactions | Dev | 3,000,000 | 245 B | 1000 | 10 | 1000/Sec | 50m | ? |
+| Charges | Dev | 60,000 | 11,011.82B = 12KB | 600 | 600 | 50/Sec | 20m | $413.55 / month |
+| Account | Dev | 100,000 | 864.74B = 1KB | 200 | 10 | 200/Sec | 9m | $116.03 / month |
+| Transactions | Dev | 3,000,000 | 615.46B = 1KB | 1000 | 10 | 1000/Sec | 50m | $575.52 / month |
 
 ## **Consequences**
 Due to some cost according to these increases, it is possible to decrease these parameters after migration and development, and re-enable them when need is required, despite the charges estimate and actual apportionment requirement, it can happen 1 or 2 times in years.
