@@ -6,16 +6,27 @@
 
 ## **Context**
 
-It is needed to index all migrated data about Transactions and Accounts into an elastic index with regards to the requirement in some screens such as All Transaction screen. Currently the indexing is run by a housing-listener, this listener listens to new transactions inserted and will index it into the Elastic index. 
+The indexing of Transactions and Accounts data is a functional requirement with regards to providing data for the All Transactions UI screen.
+Currently the indexing is performed by the Housing-Listener which handles new Transaction created events and indexes them in Elastic Search.
 
-for this purpose there are two solution
-1. Sending message to housing-listener one by one after migration
-The problem in this solution is, it is not reliable because of the low velocity and FIFO mechanism of the SQS.
-2. Using the bulk index lambda function in the housing domain, the reason for preparing this lambda in the housing domain is because of the Elastic non distributable node.
+However this process is very slow and is proceeding at a rate of approx 500,000/day.
+
+| Environment | Number of Transaction Items | Time to Index|
+|----------------------------------------------------------------|
+| Dev/Staging | 3 million | 6 days | |
+| Production | 100+ million | 20 days |
+
+The reason for this low velocity is the reliance of the FIFO mechanism of the SQS, the need to raise an event for each record indexed.
+
+This problem can be resolved by bypassing the need to rely on the SQS messaging infrastructure.
+We propose that we separate the bulk index lambda function, and position it in the housing domain.
+The reason for preparing this lambda in the housing domain is because of the Elastic non distributable node.
 
 ## **Decision**
 
-preparing a possibility to define new lambda function in housing domain to bulk index the Transactions and Accounts data from IFS into Elastic index, this function pick bunch of records from IFS in a loop and index them into ES and for overcome on the timeout issue the step function will be needed to handle lambda execution.
+By creating a new lambda function in the housing domain to bulk index the Transactions and Accounts data from IFS into Elastic index,
+overcomes the timeout issue by utilising.
+The step function will be needed to handle lambda execution.
 
 ## **Further details**
 
