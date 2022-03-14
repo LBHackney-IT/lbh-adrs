@@ -19,7 +19,7 @@ However this process is very slow and is proceeding at a rate of approx 500,000/
 The reason for this low velocity is the reliance of the FIFO mechanism of the SQS, the need to raise an event for each record indexed.
 
 This problem can be resolved by bypassing the need to rely on the SQS messaging infrastructure.
-We propose that we separate the data migration utility into 2 separate section. Keep the first as it is in the finance domain.
+We propose that we separate the data migration utility into 2 separate lamda functions. Keep the first as it is in the finance domain.
 The second one will be created as a lambda function, and position it in the housing domain.
 
 **Function of the 2 lambdas**
