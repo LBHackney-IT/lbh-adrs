@@ -12,7 +12,8 @@ Currently the indexing is performed by the Housing-Listener which handles new Tr
 However this process is very slow and is proceeding at a rate of approx 500,000/day.
 
 | Environment | Number of Transaction Items | Time to Index|
-| Dev/Staging | 3 million | 6 days | |
+|-------------|-----------------------------|--------------|
+| Dev/Staging | 3 million | 6 days |
 | Production | 100+ million | 20 days |
 
 The reason for this low velocity is the reliance of the FIFO mechanism of the SQS, the need to raise an event for each record indexed.
