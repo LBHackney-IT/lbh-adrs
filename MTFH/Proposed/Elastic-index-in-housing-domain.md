@@ -22,7 +22,7 @@ This problem can be resolved by bypassing the need to rely on the SQS messaging 
 We propose that we separate the data migration utility into 2 separate section. Keep the first as it is in the finance domain.
 The second one will be created as a lambda function, and position it in the housing domain.
 
-Function of the 2 lambdas
+**Function of the 2 lambdas**
 1. Data Migrator - situated in the Finance Domain
 2. Bulk Indexer - located in the Housing Search domain and executed after DM is complete.
 
