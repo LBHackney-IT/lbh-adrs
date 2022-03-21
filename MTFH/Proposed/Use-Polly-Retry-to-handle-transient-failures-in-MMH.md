@@ -10,7 +10,7 @@ Manage my Home has successfully implemented an EDA approach to handle updates to
 use API calls to retrieve data from data sources, where the data needed does not belong to the data domain, which the Listener is responsible for. For example, the Person Listener will use an API call to retrieve Tenure information for any changes to a tenure, 
 but will use a direct DynamoDB query to retrieve/update Person data.
 
-As the Listeners perform API calls, a proposal to start using a librabry called 'Polly 'for retrying API calls has been made. We have completed a succesfull [spike](https://docs.google.com/document/d/1gLwslJdTZKBGn-uZcWDsxNOkV6ucO051CacIJQTnaks/edit) to test out the functionality.
+As the Listeners perform API calls, a proposal to start using a librabry called 'Polly 'for retrying API calls has been made. We have completed a succesfull [spike](https://docs.google.com/document/d/1gLwslJdTZKBGn-uZcWDsxNOkV6ucO051CacIJQTnaks/edit) to test out the functionality. The spike documentation outlines the implementation details of how to use the library.
 
 The benefit of using such approach is that it will retry API calls in Listeners, providing more resiliance to our architectural approach of handling events.
 
