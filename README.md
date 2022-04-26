@@ -27,7 +27,7 @@ As a **Data architect** I need
 - To understand where I can find a list of technical decisions related to data so I can understand the reasoning behind a given implementation
 - To have easy access to technical decisions regarding data so I can ensure I am following the established standards when working on data components 
 
-As a **Cyber silver member** I need
+As a **Technical Design Authority member** I need
 
 - A summarized version of technical decisions being made so I can understand the reason behind them
 - Technical documentation written in a clear and concise way so I can understand a technical decision even if I am not familiar with a given technology
