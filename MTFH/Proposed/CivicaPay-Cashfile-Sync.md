@@ -7,12 +7,12 @@
 ## **Context**
 The CivicaPay cash files are required to be imported into the Interim Finance System (IFS) on a daily basis. Currently the CivicaPay system generates a cash file (.dat format) at 7PM daily. On the following morning this is then copied to a Google Drive folder where it is processed by an AWS Step Function.
 
-The drawback to this process is that on the Finance side this process manually driven and is therefore prone to error. 
+The drawback to this method is that on the Finance side this process is manually driven and is therefore prone to error. 
 
 ## **Decision**
 This is a proposal for the infrastructure required to automate this process.
 
-![Proposed infrastructure](https://drive.google.com/file/d/1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_/view?usp=sharing)
+![Proposed infrastructure](https://drive.google.com/file/d/1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_/view?usp=sharing&id=1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_)
 
 
 The following AWS resources need to be provisioned:
@@ -33,7 +33,6 @@ The following AWS resources need to be provisioned:
 3.  The Lambda function then copies the file to the Finance Google Drive folder and processes and imports the data into the IFS system.
 
 ## **Further details** 
-
 A working version of the process is currently operational on the Housing Finance development environment. 
 
 ## **Consequences**
