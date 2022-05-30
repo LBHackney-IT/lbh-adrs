@@ -12,7 +12,7 @@ The drawback to this method is that on the Finance side this process is manually
 ## **Decision**
 This is a proposal for the infrastructure required to automate this process.
 
-![Proposed infrastructure](https://drive.google.com/file/d/1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_/view?usp=sharing&id=1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_)
+![Proposed infrastructure](https://drive.google.com/uc?export=view&id=1Rh36VrucgNT04F0PRj3cGPaVV4-Ddy-_)
 
 
 The following AWS resources need to be provisioned:
