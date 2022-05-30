@@ -34,6 +34,7 @@ The following AWS resources need to be provisioned:
 
 ## **Further details** 
 A working version of the process is currently operational on the Housing Finance development environment. 
+[Infrastructure project](https://github.com/LBHackney-IT/mtfh-finance-infrastructure/tree/main/civica_sftp_filesync_module)
 
 ## **Consequences**
 The current process requires daily manual intervention by a Housing Finance Officer. This process removes that dependency on manual intervention and the risks thereof.
