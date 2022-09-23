@@ -1,7 +1,5 @@
 # Finance PostgresSQL Migration
 
-  
-
 ### **Date:** 23 September 2022 
 
 ### **Status:**  PROPOSED
