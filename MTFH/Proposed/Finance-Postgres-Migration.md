@@ -1,5 +1,7 @@
 # Finance PostgresSQL Migration
 
+  
+
 ### **Date:** 23 September 2022 
 
 ### **Status:**  PROPOSED
@@ -28,7 +30,7 @@ A number of steps have been identified as necessary for
 
 ### Create the Primary and Replica instances:
 
-All five database instances have been created and maintained using Terraform in the mtfh-finance-infrastructure Github repository. The pull request for the POC infrastructure for this proposal can be found here:
+These five database instances have been provisioned and maintained in the `mtfh-finance-infrastructure` Github repository. The pull request for the proof-of-concept infrastructure for this proposal can be found here:
 [https://github.com/LBHackney-IT/mtfh-finance-infrastructure/pull/14](https://github.com/LBHackney-IT/mtfh-finance-infrastructure/pull/14)
 
 **Convert Schema: MSSQL to PostgresSQL**
@@ -214,23 +216,26 @@ Create a Data Migration Task with the following parameters:
 
 
 ## **Decision**
+The following has been completed and is in process:
 
-  
-
-What is the change that we're proposing and/or doing?
-
+ - Creation of the PostgresSQL primary-replica infrastructure completed on Development and Staging environments.
+ - We have migrated the data from the IFS database and it is now replicating with the PostgresSQL master database for ongoing changes.
+ - We will be conducting consultations with other MTFH teams to discuss and agree on the exposed data-models of the Finance APIs.
+ - We are in the process of repointing the APIs to the new dedicated Postgres replica instances.
+ - We will be proposing additional features such as Caching data retrieval and implementation of CQRS at the API level
   
 
 ## **Further details**
 
-  
-
-Links to evaluations, previously done work, spike documentation, etc.
-
+ - [Migrating a commercial database to open source with AWS SCT and AWS DMS](https://aws.amazon.com/blogs/database/migrating-a-commercial-database-to-open-source-with-aws-sct-and-aws-dms/)
+ - [AWS Schema Conversion Tool User Guide](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/Schema-Conversion-Tool.pdf)
+ - [AWS Data Migration Service User Guide](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html)
+ - [Migrate SQL Server to Amazon Aurora PostgreSQL using best practices and lessons learned from the field](https://aws.amazon.com/blogs/database/migrate-sql-server-to-amazon-aurora-postgresql-using-best-practices-and-lessons-learned-from-the-field/)
+ - [Step-by-Step Guide for Microsoft SQL Server Migration to Amazon Aurora (MySQL)](https://github.com/aws-samples/aws-dms-getting-started-blog/blob/main/SQLServerMigration.md) 
+ - [Step-by-Step Guide for Oracle Migration to Amazon Aurora (PostgreSQL)](https://github.com/aws-samples/aws-dms-getting-started-blog/blob/main/OracleMigration.md)
   
 
 ## **Consequences**
-
-  
+ 
 
 This change will lower the monthly operational cost of using SQL Server of the IFS database and the the DynamoDb databases. It will complete the database migration of IFS to the individual microservice databases for the Housing Finance APIs (Accounts, Charges and Transactions) which will enable other applications to consume this data.
