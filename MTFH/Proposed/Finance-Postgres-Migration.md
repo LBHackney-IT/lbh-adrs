@@ -21,7 +21,7 @@ The vision is to convert the database schema and the database objects using a he
 [Replica 3 Identifier]: housing-finance-postgres-replica-db-03-[env] | PostgresSQL |Charges API |
 [Replica 4 Identifier]: housing-finance-postgres-replica-db-04-[env] | PostgresSQL |Transactions API |
 
-A number of steps have been identified as necessary for
+The following is the step-by-step process that was undertaken to provision and configure the databases for creation and data migration:
 
  1. Create the Primary PostgresSQL and Replica instances using Terraform
  2. Convert the Schema of the MSSQL Primary RDS to PostgresSQL Schema conversion is done using the AWS Schema Conversion Tool (SCT)
