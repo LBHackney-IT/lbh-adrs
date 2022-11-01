@@ -3,7 +3,7 @@
 
 ### **Date:** 3rd August 2022
 
-### **Status:** PROPOSED
+### **Status:** ACCEPTED
 
 ## **Context**
 
