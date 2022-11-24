@@ -1,0 +1,29 @@
+#  Use NuGet Packages In Base API
+
+### **Date:** 05/10/2021
+
+### **Status:** ACCEPTED
+
+## **Context**
+
+A set of NuGet packages have been created for reusable code identified ccross our APIs. 
+
+All common core packages are added to [this repository.](https://github.com/LBHackney-IT/lbh-core)
+
+A guide on how to use the packages is available [here.](https://github.com/LBHackney-IT/lbh-core/wiki/Using-the-package(s)-from-the-Hackney.Core-repository)
+
+Extracting common code into packages promotes reusability and consistency by preventing the duplication of common code when implementing our APIs. It also makes the management of common code easier. Teams are given the ability to only import the packages relevant to their project.
+
+The usage of the Hackney created NuGet packages is currently limited to the "Manage my Home" team.  
+
+## **Decision**
+
+**Update Base API to make use of common NuGet packages created**
+
+- Updating our Base API will ensure that all new APIs created will be making use of our common NuGet packages regardless of which team creates the API.
+- The Base API will only be updated to use packages relevant to the base API implementation, such as logging, validation, etc.
+- By updating the template, we ensure consistency for newly created APIs.
+
+## **Consequences**
+
+A small learning curve for teams creating new APIs to understand where relevant NuGet packages documentation is and how to use them.
